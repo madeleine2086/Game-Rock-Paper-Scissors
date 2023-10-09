@@ -6,6 +6,7 @@ const play = () => {
     const startPlaying = () => {
         allButtons.forEach(user => {
             user.addEventListener("click", () => {
+            prepareToPlay(user);
             let timeInterval = setInterval(() => {
                 if (time === 0) {
                     clearInterval(timeInterval);
@@ -17,6 +18,16 @@ const play = () => {
             })
         })
     }
+    prepareToPlay = (user) => {
+        allButtons.forEach(val => val.classList.remove("pink"));
+        time = 3;
+        winner.textContent = time;
+
+        user.classList.add("pink");
+
+    }    
+
     startPlaying()
+
 }
 play()
