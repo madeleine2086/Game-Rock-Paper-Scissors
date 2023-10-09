@@ -1,6 +1,10 @@
 const play = () => {
     let allButtons = document.querySelectorAll('.button');
     let winner = document.getElementById('winner');
+    let player-result
+    let computerChoice = "";
+    let userChoice = "";
+    let 
     let time = 3;
 
     const startPlaying = () => {

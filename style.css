@@ -43,3 +43,10 @@ body {
 .pink {
     color: pink;
 }
+
+.result {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    align-items: center;
+}
