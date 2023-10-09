@@ -10,6 +10,8 @@ const play = () => {
             let timeInterval = setInterval(() => {
                 if (time === 0) {
                     clearInterval(timeInterval);
+                    let computer = Math.floor(Math.random() * 3);
+                    playerAndComputerDisplay(user.id, allButtons[computer].id)
                 } else {
                     winner.textContent = time;
                     time--;
