@@ -57,6 +57,7 @@ const play = () => {
         }
         if (user === "rock") {
             if (computer === "scissors") {
+                winner.textContent = "You Win!";
                 userScore++;
                 userScoreDisplay.textContent = userScore;
                 return;
@@ -66,7 +67,32 @@ const play = () => {
                 computerScoreDisplay.textContent = computerScore;
                 return;
             }
-        
+        }
+        if (user === "paper") {
+            if (computer === "scissors") {
+                winner.textContent = "Computer Wins!";
+                computerScore++;
+                computerScoreDisplay.textContent = computerScore;
+                return;
+            } else {
+                winner.textContent = "You Win!";
+                userScore++;
+                userScoreDisplay.textContent = userScore;
+                return;
+            }
+        }
+        if (user === "scissors") {
+            if (computer === "rock") {
+                winner.textContent = "Computer Wins!";
+                computerScore++;
+                computerScoreDisplay.textContent = computerScore;
+                return;
+            } else {
+                winner.textContent = "You Win!";
+                userScore++;
+                userScoreDisplay.textContent = userScore;
+                return;
+            }
         }
     }
 
