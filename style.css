@@ -1,8 +1,8 @@
 body {
     background-image: url(./assets/images/many-human-hands-simple-illustration_185757-1278.avif);
-    border-image-repeat: stretch;
     font-size: 30px;
     text-align: center;
+    max-height: 100%;
 }
 
 h1 {
@@ -14,7 +14,7 @@ h1 {
 .game-div {
     display: grid;
     grid-template-columns: auto;
-    min-width: 980px;
+    min-width: 90%;
     background-color: grey;
 }
 

@@ -1,4 +1,5 @@
 const play = () => {
+    //Variables
     let allButtons = document.querySelectorAll('.button');
     let winner = document.getElementById('winner');
     let playerResult = document.getElementById('player-result');
@@ -12,6 +13,7 @@ const play = () => {
     let userChoice = "";
     let time = 3;
 
+        //This function is responsible for playing the game and consists of 3 functions.
     const startPlaying = () => {
         allButtons.forEach(user => {
             user.addEventListener("click", () => {
@@ -27,10 +29,11 @@ const play = () => {
                     winner.textContent = time;
                     time--;
                 }
-            }, 700)
+            }, 800)
             })
         })
     }
+    //function is displaying players choices.
     playerAndComputerDisplay = (user, computer) => {
         playerResult.classList.remove('fa-hand-' + userChoice);
         computerResult.classList.remove('fa-hand-' + computerChoice);
@@ -40,7 +43,7 @@ const play = () => {
         computerChoice = computer;
     }
 
-
+    //function is highlighting selected button with red colour for 3 seconds, just before displaying the result.
     prepareToPlay = (user) => {
         allButtons.forEach(val => val.classList.remove('red'));
         time = 3;
@@ -49,7 +52,7 @@ const play = () => {
         user.classList.add('red');
         resultSection.classList.remove('result');
     }
-    
+    //function is checking who wins the round and displays the result.
     checkWinner = (user, computer) => {
         if (user === computer) {
             winner.textContent = "Draw!";
@@ -95,9 +98,6 @@ const play = () => {
             }
         }
     }
-
-
     startPlaying()
-
 }
 play()
