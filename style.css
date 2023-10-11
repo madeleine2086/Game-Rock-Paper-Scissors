@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Serif&display=swap');
+
 body {
     background-image: url(./assets/images/many-human-hands-simple-illustration_185757-1278.avif);
+    font-family: 'Lora', serif;
     font-size: 30px;
     text-align: center;
     max-height: 100%;
@@ -7,15 +10,27 @@ body {
 
 h1 {
     font-size: 200%;
-    background-color: rgba(245, 245, 220, 0.8);
-    
+    background-color: rgba(245, 245, 220, 0.8);    
+}
+
+footer {
+    position: absolute;
+    background-color: beige;
+}
+
+header {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .game-div {
     display: grid;
     grid-template-columns: auto;
-    min-width: 90%;
+    max-width: 75%;
     background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .players {
