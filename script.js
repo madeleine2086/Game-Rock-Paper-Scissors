@@ -1,10 +1,10 @@
 const play = () => {
     let allButtons = document.querySelectorAll('.button');
     let winner = document.getElementById('winner');
-    let player-result
+    let playerResult = document.getElementById('player-result');
+    let computerResult = document.getElementById('computer-result');
     let computerChoice = "";
     let userChoice = "";
-    let 
     let time = 3;
 
     const startPlaying = () => {
@@ -25,14 +25,13 @@ const play = () => {
         })
     }
     prepareToPlay = (user) => {
-        allButtons.forEach(val => val.classList.remove("pink"));
+        allButtons.forEach(val => val.classList.remove("red"));
         time = 3;
         winner.textContent = time;
 
-        user.classList.add("pink");
+        user.classList.add("red");
 
     }    
-
     startPlaying()
 
 }
