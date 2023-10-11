@@ -51,7 +51,23 @@ const play = () => {
     }
     
     checkWinner = (user, computer) => {
-
+        if (user === computer) {
+            winner.textContent = "Draw!";
+            return;
+        }
+        if (user === "rock") {
+            if (computer === "scissors") {
+                userScore++;
+                userScoreDisplay.textContent = userScore;
+                return;
+            } else {
+                winner.textContent = "Computer Wins!";
+                computerScore++;
+                computerScoreDisplay.textContent = computerScore;
+                return;
+            }
+        
+        }
     }
 
 
