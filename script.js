@@ -3,6 +3,7 @@ const play = () => {
     let winner = document.getElementById('winner');
     let playerResult = document.getElementById('player-result');
     let computerResult = document.getElementById('computer-result');
+    let resultSection = document.getElementById('result');
     let computerChoice = "";
     let userChoice = "";
     let time = 3;
@@ -16,6 +17,7 @@ const play = () => {
                     clearInterval(timeInterval);
                     let computer = Math.floor(Math.random() * 3);
                     playerAndComputerDisplay(user.id, allButtons[computer].id)
+                    resultSection.classList.add('result');
                 } else {
                     winner.textContent = time;
                     time--;
@@ -35,11 +37,12 @@ const play = () => {
 
 
     prepareToPlay = (user) => {
-        allButtons.forEach(val => val.classList.remove("red"));
+        allButtons.forEach(val => val.classList.remove('red'));
         time = 3;
         winner.textContent = time;
 
-        user.classList.add("red");
+        user.classList.add('red');
+        resultSection.classList.remove('result');
 
     }    
     startPlaying()
