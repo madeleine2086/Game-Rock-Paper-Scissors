@@ -24,6 +24,16 @@ const play = () => {
             })
         })
     }
+    playerAndComputerDisplay = (user, computer) => {
+        playerResult.classList.remove('fa-hand-' + userChoice);
+        computerResult.classList.remove('fa-hand-' + computerChoice);
+        playerResult.classList.add('fa-hand-' + user);
+        computerResult.classList.add('fa-hand-' + computer);
+        userChoice = user;
+        computerChoice = computer;
+    }
+
+
     prepareToPlay = (user) => {
         allButtons.forEach(val => val.classList.remove("red"));
         time = 3;
