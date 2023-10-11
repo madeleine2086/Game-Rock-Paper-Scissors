@@ -1,13 +1,21 @@
 body {
-    background-color: gray;
-    font-size: 40px;
+    background-image: url(./assets/images/many-human-hands-simple-illustration_185757-1278.avif);
+    border-image-repeat: stretch;
+    font-size: 30px;
     text-align: center;
+}
+
+h1 {
+    font-size: 200%;
+    background-color: rgba(245, 245, 220, 0.8);
+    
 }
 
 .game-div {
     display: grid;
     grid-template-columns: auto;
     min-width: 980px;
+    background-color: grey;
 }
 
 .players {
