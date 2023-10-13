@@ -1,5 +1,5 @@
 const play = () => {
-    //Variables
+    //Declare variables
     let allButtons = document.querySelectorAll('.button');
     let winner = document.getElementById('winner');
     let playerResult = document.getElementById('player-result');
@@ -13,7 +13,10 @@ const play = () => {
     let userChoice = "";
     let time = 3;
 
-        //This function is responsible for playing the game and consists of 3 functions.
+        /**This function is responsible for playing the game
+         * Add event listener to the buttons
+         * set the timer
+         */
     const startPlaying = () => {
         allButtons.forEach(user => {
             user.addEventListener("click", () => {
@@ -52,7 +55,9 @@ const play = () => {
         user.classList.add('red');
         resultSection.classList.remove('result');
     }
-    //function is checking who wins the round and displays the result.
+    /** Function is checking who wins the round and displays the result by comparing
+     * player's choice with computer's choice
+     */
     checkWinner = (user, computer) => {
         if (user === computer) {
             winner.textContent = "Draw!";
