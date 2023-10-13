@@ -25,16 +25,16 @@ const play = () => {
                 if (time === 0) {
                     clearInterval(timeInterval);
                     let computer = Math.floor(Math.random() * 3);
-                    playerAndComputerDisplay(user.id, allButtons[computer].id)
+                    playerAndComputerDisplay(user.id, allButtons[computer].id);
                     checkWinner(user.id, allButtons[computer].id);
                     resultSection.classList.add('result');
                 } else {
                     winner.textContent = time;
                     time--;
                 }
-            }, 800)
-            })
-        })
+            }, 800);
+            });
+        });
     }
     //function is displaying players choices.
     playerAndComputerDisplay = (user, computer) => {
@@ -44,7 +44,7 @@ const play = () => {
         computerResult.classList.add('fa-hand-' + computer);
         userChoice = user;
         computerChoice = computer;
-    }
+    };
 
     //function is highlighting selected button with red colour for 3 seconds, just before displaying the result.
     prepareToPlay = (user) => {
@@ -54,7 +54,7 @@ const play = () => {
 
         user.classList.add('red');
         resultSection.classList.remove('result');
-    }
+    };
     /** Function is checking who wins the round and displays the result by comparing
      * player's choice with computer's choice
      */
@@ -102,7 +102,7 @@ const play = () => {
                 return;
             }
         }
-    }
-    startPlaying()
-}
-play()
+    };
+    startPlaying();
+};
+play();
