@@ -1,39 +1,72 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock Paper Scissors Game
 
-Welcome,
+Rock, Paper, Scissors is a simple yet entertaining game for players of all ages. The game does have 9 outcome combinations. Draws happen a third of the time, so for the rest of it there is a winner. The game is not complicated, the player has to choose one out of three buttons: Rock, Paper or Scissors. The rules are: Rock blunts Scissors, Scissors cuts Paper, Paper covers Rock. The objective is to defeat the computer by choosing a correct weapon without knowing the computer's choice.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![mock-up](https://github.com/madeleine2086/Game-Rock-Paper-Scissors/assets/136820651/881a5d56-bd5f-4a7d-bcf8-6eb6e78a19a1)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Features
 
-## Codeanywhere Reminders
+### Existing Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- __The Header__
 
-`python3 -m http.server`
+  - The header tells the users what game they are playing and displayes rules of the game in a clear, simple way.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- __The Game Options__
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+  - There's three buttons to choose from: Rock, Paper and Scissors.
+  - Once a player clicks the button of their choice, that button is highlighted with a red colour. That also sets the timer to countdown from 3 to 0. After that the result is displayed.
 
-`http_server`
+- __The Game Results__
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+  - The round can end in three different ways for the player. It can be a draw, win or loss.
+  - JavaScript code chooses a random option for the computer and displays it beside the players choice.
+  - The result is displayed under the choice buttons but above the player and the computer choices, along with either of the messages: "Draw!", "You Win!", "Computer Wins!".
+  - The result is clear for the user and the score is updated either for the player or the computer.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- __The Footer__
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - The footer section includes a clear message, displaying "Select a symbol to play again!". The player has to choose and click the button to start another round.
 
-To log into the Heroku toolbelt CLI:
+### Features Left to Implement
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- __Room for improvement__
+  
+  - This game can have better graphics and use sound effects to emphasize winning and loosing, making it more interactive.
+  
+## Testing
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+This site was tested on all screen sizes, on Chrome and Microsoft Edge browsers.
 
----
+### Validator Testing
 
-Happy coding!
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+- JavaScript
+  - No errors were found when passing through the JavaScript validator (<https://jshint.com/>)
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - <https://madeleine2086.github.io/Game-Rock-Paper-Scissors/>
+
+## Credits
+
+### Content
+
+- This project was inspired by example project Rock-Paper-Scissors at the end of the Javascript module.
+- The code written was inspired by the work of following online creators and their attempts to create the very same game:
+  - <https://www.youtube.com/@AniaKubow>
+  - <https://www.youtube.com/@BroCodez>
+  - <https://www.youtube.com/@akademiafrontendu9706>
+- The little graphics for buttons were taken from [Font Awesome](https://fontawesome.com/)
+
+### Media
+
+- The background picture were taken from <https://www.freepik.com/author/tutti-frutti>
